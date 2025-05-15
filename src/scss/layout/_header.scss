@@ -1,3 +1,22 @@
+@use "/scss/mixins";
+
 .header {
   height: 60px;
+  background-color: orange;
+
+  @include mixins.screen(xl) {
+    background-color: green;
+  }
+
+  @include mixins.screen(lg) {
+    background-color: violet;
+  }
+
+  @include mixins.screen(md) {
+    background-color: blue;
+  }
+
+  @include mixins.screen(sm) {
+    background-color: red;
+  }
 }
