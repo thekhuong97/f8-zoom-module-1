@@ -1,22 +1,162 @@
 @use "/scss/mixins";
 
 .header {
-  height: 60px;
-  background-color: orange;
-
   @include mixins.screen(xl) {
-    background-color: green;
+    // background-color: green;
   }
 
   @include mixins.screen(lg) {
-    background-color: violet;
+    // background-color: violet;
   }
 
   @include mixins.screen(md) {
-    background-color: blue;
+    // background-color: blue;
   }
 
   @include mixins.screen(sm) {
-    background-color: red;
+    // background-color: red;
   }
+}
+
+.navbar-wrapper {
+  background-color: var(--primary-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .about a {
+  display: inline-block;
+  padding: 13px 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.navbar .about a:hover {
+  opacity: 0.8;
+}
+
+.navbar .actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .support,
+.navbar .language,
+.navbar .account {
+  display: inline-block;
+  padding: 13px 7.5px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.navbar .support:hover,
+.navbar .language:hover,
+.navbar .account:hover {
+  opacity: 0.8;
+}
+
+.navbar .language {
+  cursor: pointer;
+}
+
+.navbar .fa-chevron-down {
+  margin-left: 6px;
+}
+
+.navbar .fa-circle-user {
+  margin-right: 6px;
+}
+
+.header-search {
+  padding: 23px 0;
+  background-color: #fff4f1;
+}
+
+.header-search-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+}
+
+.search-box .categories {
+  padding: 13px 16px;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  font-size: 1.5rem;
+  color: #aeaeae;
+  background-color: var(--white-color);
+}
+
+.search-box .categories .fa-chevron-down {
+  margin-left: 6px;
+}
+
+.search-box .search-form {
+  margin-left: 2px;
+  padding: 13px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  background-color: var(--white-color);
+}
+
+.search-box .search-form input {
+  width: 300px;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  color: #aeaeae;
+}
+
+.search-box .search-form input::placeholder {
+  color: #aeaeae;
+}
+
+nav {
+  background-color: var(--white-color);
+  box-shadow: 0px 4.206px 11.25px 0px rgba(244, 244, 244, 0.5);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-inner ul {
+  display: flex;
+}
+
+.nav-inner ul li {
+  padding: 19px 10px;
+}
+
+.nav-inner li a {
+  font-size: 1.472rem;
+  font-weight: 500;
+  color: #404040;
+}
+
+.nav-inner li .fa-chevron-down {
+  margin-left: 12px;
+}
+
+.nav-inner .hotline {
+  display: flex;
+  font-size: 1.472rem;
+  font-weight: 600;
+  color: #5c5c5c;
+}
+
+.nav-inner .phone-number {
+  margin-left: 8px;
 }
